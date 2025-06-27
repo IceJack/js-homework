@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.carousel_container {
+    width: 24rem;
+    height: 23.25rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+    /*임의 중앙정렬*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel_container > div {
+    width: 100%;
+}
+
+.carousel__header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* 상단 버튼 */
+.recommend__btn {
+    all: unset;
+    position: relative;
+    height: 2.25rem;
+    width: 8.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding-left: 41.5px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 112%;
+    letter-spacing: -1%;
+    border-radius: 6.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.recommend__btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 11.5px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    background-image: url("./assets/headerBtnImg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.recommend__btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 11.5px;
+    width: 7px;
+    height: 12px;
+    transform: translateY(-50%);
+    background-image: url("./assets/right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.recommend__btn:hover {
+    background-color: #f5f5f5;
+}
+/* 상단 버튼 */
+
+/* 캐러셀 메인 */
+.carousel__main {
+    height: 15.375rem;
+    display: flex;
+}
+
+.carousel__footer {
+    height: 3.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.carousel__footer button {
+    all: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: black;
+    cursor: pointer;
+    border: rgba(0, 0, 0, 0.08) 1px solid;
+    background-image: url("./assets/arrow.svg");
+    background-size: 10px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+.carousel__footer button:nth-child(1) {
+    transform: rotate(180deg);
+}
+
+.carousel__page {
+    display: none;
+    flex-direction: row;
+    padding: 0.1875rem 1.5rem;
+    width: 100%;
+}
+
+.carousel__page.carousel__current__page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel__page__item {
+    height: 15rem;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel__item__image__wrapper {
+    position: relative;
+    height: 172px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel__item__image__wrapper img {
+    position: absolute;
+    width: 10rem;
+    object-fit: cover;
+}
+
+.carousel__item__background {
+    height: 160px;
+    top: 12px;
+    border-radius: 8px;
+}
+
+.carousel__item__character {
+    height: 172px;
+    top: 3px;
+    transform: scale(1) translate(0, 0);
+    will-change: transform;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+.carousel__item__game__title,
+.carousel__item__game__discription,
+.carousel__item__game__category {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    line-height: 112%;
+    letter-spacing: -1%;
+    transition: opacity 0.3s ease;
+}
+
+.carousel__item__game__title {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.carousel__item__game__discription {
+    font-size: 0.875rem;
+    margin-top: 2px;
+}
+.carousel__item__game__category {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.48);
+    margin-top: 0.5rem;
+}
+
+.carousel__page__item:hover .carousel__item__character {
+    transform: scaleX(1.025) scaleY(1.025) translate(-2px, 1px);
+}
+.carousel__page__item:hover .carousel__item__game__title,
+.carousel__page__item:hover .carousel__item__game__discription {
+    opacity: 0.64;
+}
+/* 캐러셀 메인 */
+
+/* 하단 조작 패널 */
+.carousel__footer button:hover {
+    background-color: #f5f5f5;
+}
+
+.carousel__page__numbering {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 112%;
+    letter-spacing: -1%;
+}
+
+.carousel__all__page {
+    color: rgba(0, 0, 0, 0.7);
+}
