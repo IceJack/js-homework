@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.main-container {
+    width: 100%;
+    height: 69.875rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.25rem;
+}
+
+.left-side {
+    width: 670px;
+    min-width: 670px;
+    height: 701px;
+    margin-top: 128px;
+}
+
+.left-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #b31116;
+}
+
+.left-main-text {
+    font-weight: 100;
+    color: #b31116;
+    line-height: 120%;
+    font-size: 86px;
+    margin-top: 88px;
+    word-break: keep-all;
+    width: 100%;
+}
+
+.left-main-text_bold {
+    font-weight: 700;
+}
+
+.left-sub-text {
+    font-weight: 350;
+    margin-top: 64px;
+    font-size: 20px;
+    line-height: 140%;
+    width: 299px;
+    word-break: keep-all;
+}
+
+.button-wrapper {
+    margin-top: 84px;
+    display: flex;
+    gap: 16px;
+}
+
+.front-school-btn,
+.view-curriculum-btn {
+    all: unset;
+    font-size: 24px;
+    font-weight: 500;
+    height: 53px;
+    display: inline-block;
+    padding: 12px 36px;
+    box-sizing: border-box;
+}
+
+.front-school-btn {
+    background-color: #1d1316;
+    color: #ffffff;
+    border-radius: 100px;
+}
+.view-curriculum-btn {
+    color: #b31116;
+}
+
+.right-side {
+    width: 846px;
+    min-width: 846px;
+    height: 993px;
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(5, 125px);
+    grid-template-rows: repeat(7, 125px);
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    overflow: visible;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    will-change: transform;
+}
+
+.i1 {
+    grid-row: 1;
+    grid-column: 5;
+}
+.i2 {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+}
+.i3 {
+    grid-row: 2;
+    grid-column: 4;
+    transform-origin: left bottom;
+}
+.i4 {
+    grid-row: 2;
+    grid-column: 5;
+}
+.i5 {
+    grid-row: 3;
+    grid-column: 2;
+}
+.i6 {
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 2;
+    border-radius: 50% 0 50% 50%;
+}
+.i7 {
+    grid-row: 3;
+    grid-column: 5;
+    transform-origin: right bottom;
+}
+.i8 {
+    grid-row: 4;
+    grid-column: 1;
+}
+.i9 {
+    grid-row: 4;
+    grid-column: 2;
+    transform-origin: right top;
+}
+.i10 {
+    grid-row: 4;
+    grid-column: 5;
+    transform-origin: right top;
+}
+.i11 {
+    grid-row: 5;
+    grid-column: 2;
+    transform-origin: right top;
+}
+.i12 {
+    grid-row: 5;
+    grid-column: 3 / span 2;
+    transform-origin: center top;
+}
+.i13 {
+    grid-row: 5 / span 2;
+    grid-column: 5;
+}
+.i14 {
+    grid-row: 6;
+    grid-column: 2;
+}
+.i15 {
+    grid-row: 6;
+    grid-column: 3 / span 2;
+}
+.i16 {
+    grid-row: 7;
+    grid-column: 2;
+}
+
+.line01 {
+    top: 183px;
+    left: 41px;
+}
+.line02 {
+    top: 433px;
+    left: 32px;
+}
+.line03 {
+    left: 0px;
+    top: 683px;
+}
+.line04 {
+    top: 28px;
+    left: 735px;
+}
+.line05 {
+    top: 1px;
+    left: 234px;
+}
+.line06 {
+    top: 122px;
+    left: 483px;
+}
